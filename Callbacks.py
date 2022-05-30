@@ -1,6 +1,6 @@
 from keras.callbacks import ModelCheckpoint
 from keras_tqdm import TQDMNotebookCallback
-from tensorflow_addons.callbacks.cyclical_learning_rate import CyclicLR
+from tensorflow.keras_contrib.callbacks.cyclical_learning_rate import CyclicLR
 
 def get_callbacks(MODEL_PATH):
     """
