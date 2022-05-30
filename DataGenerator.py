@@ -1,9 +1,9 @@
 # Matrix operations
 import numpy as np
 # Abstract class for Data Generator
-from keras.utils import Sequence
+from tensorflow.keras.utils import Sequence
 # Image normalization
-from keras.applications.imagenet_utils import preprocess_input
+from tensorflow.keras.applications.imagenet_utils import preprocess_input
 # Image augmentations
 import albumentations as A
 # Reading images
