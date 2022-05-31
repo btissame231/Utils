@@ -11,7 +11,7 @@ def get_callbacks(MODEL_PATH):
     
     """
     checkpoint = ModelCheckpoint(MODEL_PATH, 
-                                 monitor='val_iou_score', 
+                                 monitor='iou_score', 
                                  verbose=1, 
                                  save_best_only=True, 
                                  mode='max')
