@@ -83,8 +83,8 @@ class DataGenerator(Sequence):
             image = img_as_ubyte(np.clip(
                 resize(rgb2gray(io.imread(X_id)), (self.height, self.width)), -1.0, 1.0))
 
-            mask = img_as_ubyte(np.clip(resize(rgb2gray(io.imread(
-                Y_id)), (self.height, self.width)), -1.0, 1.0)) / 255
+            mask = img_as_ubyte(np.clip(resize(io.imread(
+                Y_id), (self.height, self.width)), -1.0, 1.0)) / 255
 
             if self.augment:
                 augmented = self.aug(image=image,mask=mask) #augment image
