@@ -11,10 +11,10 @@ def get_callbacks(MODEL_PATH):
     
     """
     checkpoint = ModelCheckpoint(MODEL_PATH, 
-                                 monitor='val_loss', 
+                                 monitor='val_iou_score', 
                                  verbose=1, 
                                  save_best_only=True, 
-                                 mode='min')
+                                 mode='max')
 
 
     clr = CyclicLR(base_lr=0.000001, 
