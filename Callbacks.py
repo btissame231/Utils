@@ -1,6 +1,6 @@
 from keras.callbacks import ModelCheckpoint
 from keras_tqdm import TQDMNotebookCallback
-from tensorflow_addons.optimizers import CyclicalLearningRate
+from keras_contrib.callbacks.cyclical_learning_rate import CyclicLR
 
 def get_callbacks(MODEL_PATH):
     """
@@ -17,7 +17,7 @@ def get_callbacks(MODEL_PATH):
                                  mode='max')
 
 
-    clr = CyclicalLearningRate(base_lr=0.000001, 
+    clr = CyclicLR(base_lr=0.000001, 
                    max_lr=0.001,
                    step_size=3000, 
                    mode='exp_range') 
