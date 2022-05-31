@@ -96,8 +96,8 @@ class DataGenerator(Sequence):
             X.append(image)
             Y.append(np.round(mask)) # to ensure binary targets
 
-        return np.expand_dims(np.asarray(X), axis=3), \
-                np.expand_dims(np.asarray(Y), axis=3)
+        return np.expand_dims(np.asarray(X), axis=-1), \
+                np.expand_dims(np.asarray(Y), axis=-1)
 
     def on_epoch_end(self):
         """Prepare next epoch"""
