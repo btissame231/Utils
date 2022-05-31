@@ -23,8 +23,6 @@ def get_callbacks(MODEL_PATH):
                    mode='exp_range') 
 
     callbacks = [checkpoint,
-                 clr,
-                 TQDMNotebookCallback(leave_inner=True, 
-                                      leave_outer=True)]
+                 clr]
 
     return callbacks
