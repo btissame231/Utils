@@ -3,7 +3,7 @@ import numpy as np
 # Abstract class for Data Generator
 from tensorflow.keras.utils import Sequence
 # Image normalization
-from tensorflow.keras.applications.imagenet_utils import preprocess_input
+from keras.applications.imagenet_utils import preprocess_input
 # Image augmentations
 import albumentations as A
 # Reading images
