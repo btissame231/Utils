@@ -40,7 +40,7 @@ def convblock(x, filters, batch_norm=True):
     
     return x
 
-def Unet(filters=64, layers=4, activation='sigmoid', classes=1, input_shape=None):
+def Unet(filters=32, layers=4, activation='sigmoid', classes=1, input_shape=None):
     """
     Building a U-Net [1]_.
     
